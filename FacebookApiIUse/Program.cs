@@ -1,6 +1,9 @@
+using FacebookApiIUse.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<FacebookService>();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
